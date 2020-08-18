@@ -14,10 +14,10 @@ $("#signin").click(function(event){
 	var users = $("#user:text").val();
 	if (password.length >= 6){
 	alert('Happy to see you ' + users );
-	$("#titleRight").text("Welcome To RBK " + users)
+	$("#titleRight").text(" Welcome To RBK " + users)
 	event.preventDefault();
 	$(".hide").hide();
-	$(".show").show();
+	$(".show").show("slow");
 }
 	else {
 	alert('please enter 6 characters at least ')

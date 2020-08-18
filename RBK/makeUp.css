@@ -32,17 +32,25 @@ body {
 	width : 22%;
 	background-color: white;
 	position: absolute;
-	top: 40px; right: 7px;
+	top: 40px; right: 5px;
 	 border-radius: 25px;
-	 font-size:25px
+	 font-size:25px;
+	 color:#B41A83;
+	 font:32px "Times New Roman"
+	 padding: 10px 50px 20px;
+
 }
 
+ul {
+	font-size :20px;
+}
 #style {
 	width : 20%;
 	margin : auto;
 	background-color: #B41A83;
 	border : 5px dotted black;
 	margin-top: 50px
+	font-size: 40px
 
 
 }
@@ -52,8 +60,10 @@ body {
 }
 
 #message {
-	font-size: 40px
+	font:32px "Times New Roman"
 
 }
+
+
 
 
