@@ -1,4 +1,4 @@
-var arr = [{name:'rayen',fav:'I don"t know'},
+var arr = [{name:'rayen',fav:"I don't know"},
 {name:'abubakker',fav:'Give me 20 Dinars'},
 {name:'wajdi',fav:' So.... What...Are.....You...Trying...To....DO'},
 {name:'nouha',fav:'I miss you all '},
@@ -14,6 +14,7 @@ $("#signin").click(function(event){
 	var users = $("#user:text").val();
 	if (password.length >= 6){
 	alert('Happy to see you ' + users );
+	$("#titleRight").text("Welcome To RBK " + users)
 	event.preventDefault();
 	$(".hide").hide();
 	$(".show").show();
@@ -22,6 +23,7 @@ $("#signin").click(function(event){
 	alert('please enter 6 characters at least ')
 }
 })
+
 
 $("#p1").hide()
 $("#1").hover(function(){
@@ -60,7 +62,7 @@ $("#hir").click(function(event){
 
 	for(var i = 0 ; i < arr.length ; i++){
 	
-	if($("#yourtext:text").val() === arr[i]["name"]){
+	if($("#yourtext:text").val().toLowerCase() === arr[i]["name"]){
 		$("#message").html("")
 		mydiv.append(arr[i]["fav"])
 		count++
@@ -68,7 +70,7 @@ $("#hir").click(function(event){
 }
 	if( count == 0){
 		$("#message").html("")
-		mydiv.append('I Don"t KNOW !!')
+		mydiv.append('Search for One of our HIR  !!')
 	}
 
 
@@ -81,4 +83,3 @@ $("#signIcon").click(function(){
 	alert("hello")
 })
 
-$("#title").text("Welcome To RBK " + users)
