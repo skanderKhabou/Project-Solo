@@ -22,16 +22,21 @@ body {
 
 
 }
-.login {
 
+
+#titleRight {
+	width : 20%;
+	background-color: white;
+	position: absolute;
+	top: 40px; right: 45px;
 }
 
-.style {
+#style {
 	width : 20%;
 	margin : auto;
 	background-color: #B41A83;
 	border : 5px dotted black;
-	top: 50px
+	margin-top: 50px
 
 
 }
@@ -40,7 +45,4 @@ body {
 	background-color: red;
 }
 
-#yasmine::after {
-	content: '<li id="3">Yasmine</li> <p id= "p3">deddsdflsdgfsdfsdfsdfds</p>';
-}
 

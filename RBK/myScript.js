@@ -1,13 +1,19 @@
-var arr = ['Rayen','Abubakker','Nouha', 'Wajdi' , 'Yasmine' , 'Achraf']  // i have two names for achref  // 
+var arr = [{name:'rayen',fav:'I don"t know'},
+{name:'abubakker',fav:'Give me 20 Dinars'},
+{name:'wajdi',fav:' So.... What...Are.....You...Trying...To....DO'},
+{name:'nouha',fav:'I miss you all '},
+{name:'achraf',fav:'No my name is Achraf MOUNIR'},
+{name:'yasmine',fav:'Who"s late , RED PIN'}
+]  // i have two names for achref  // 
+
+
 var $body = $('body');
-$("body").append('<a href = "index2.html"> Let"s meet HIR </a>')
 $(".show").hide();
 $("#signin").click(function(event){
 	var password = $("#pwd:Password").val();
 	var users = $("#user:text").val();
 	if (password.length >= 6){
 	alert('Happy to see you ' + users );
-	$("#logdiv").append("<h3 id = 'next'> Connected as </h3>").append(users)
 	event.preventDefault();
 	$(".hide").hide();
 	$(".show").show();
@@ -42,37 +48,37 @@ $("#5").hover(function(){
 	$("#p5").slideToggle();
 })
 
+$("#p6").hide()
+$("#6").hover(function(){
+	$("#p6").slideToggle();
+})
+
 
 $("#hir").click(function(event){
 	var mydiv = $('<div></div>')
+	var count = 0
+
 	for(var i = 0 ; i < arr.length ; i++){
-	if($("#yourtext:text").val() === arr[i]){
-		mydiv.append('I Don"t KNOW !!')
-	}
-	var mydiv2 = $('<div></div>')
-	if($("#yourtext:text").val() === arr[i]){
-		mydiv2.append('Give Me 20 Dinars BLEASE !!')
+	
+	if($("#yourtext:text").val() === arr[i]["name"]){
+		$("#message").html("")
+		mydiv.append(arr[i]["fav"])
+		count++
 	}
 }
+	if( count == 0){
+		$("#message").html("")
+		mydiv.append('I Don"t KNOW !!')
+	}
 
-	// else if($("#yourtext:text").val() === 'Nouha' || 'nouha'){
-	// 	mydiv.append('I miss You All')
-	// }
-	// else if($("#yourtext:text").val() === 'Yasmine'){
-	// 	mydiv.append('RED PIN !!')
-	// }
-	// else if($("#yourtext:text").val() === 'Wajdi'){
-	// 	mydiv.append('SO ... What .. are ... you ... trying ... to ... Do ')
-	// }
-	// else if($("#yourtext:text").val() === 'Achraf'){
-	// 	mydiv.append('No .. My name is Achraf MOUNIR')
-	// }
 
-mydiv.appendTo('body');
-mydiv2.appendTo('body')
+mydiv.appendTo($('#message'));
 event.preventDefault();
+
 })
 
 $("#signIcon").click(function(){
 	alert("hello")
 })
+
+$("#title").text("Welcome To RBK " + users)
